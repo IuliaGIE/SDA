@@ -1,0 +1,214 @@
+Tema 2
+
+  Pentru realizarea temei in cerinta
+  - 1:
+    Am citit dintr-un fisier PPM, alcatuind o matrice de pixeli 
+  cu ajutorul functiei aloca_matricea, ce a alocat memorie pentru
+  matricea necesara, dupa care cu ajutorul matricei de pixeli
+  am relizat arborele cuaternal prin functia builtQuadTree. Cu 
+  ajutorul arborelui aflat am putut determina :
+    • numărul de niveluri din arborele cuaternar;
+    • numărul de blocuri din imagine pentru care scorul 
+    similarităt, ii pixelilor este mai mic sau egal decât 
+    factorul furnizat;
+    • dimensiunea laturii pătratului pentru cea mai mare zonă 
+    din imagine care a rămas nedivizată.
+  La sfarsit am eliberat memoria utilizata de arbore
+  
+  - 2:
+    Am citit dintr-un fisier PPM, alcatuind o matrice de pixeli 
+  cu ajutorul functiei aloca_matricea, ce a alocat memorie pentru
+  matricea necesara, dupa care cu ajutorul matricei de pixeli
+  am relizat arborele cuaternal prin functia builtQuadTree.
+  Am scris in fisierul de iesire dimensiunea, dupa care am apelat 
+  functia printQuadTreeLevelOrder ce afiseaza pe nivele arborele.
+
+  - 3:
+    Neimplementata;
+
+Functii utilizate:
+  - aloca_matricea :
+    Aceasta functie aloca memorie pentru matrice
+  - elibereaza_matricea :
+    Elibereaza memoria utilizata pentru matricea de pixeli
+  - buildQuadTree :
+    Alcatuieste arborele cuaternal conform cerintei
+  - num_levels :
+    Determina numarul de nivele din arbore
+  - countLeaves :
+    Numara cate frunze are arborele, verificand daca node->type
+    este 1, adica este frunza. Acest lucru reprezinta numărul
+    de blocuri din imagine pentru care scorul similarităt, 
+    ii pixelilor este mai mic sau egal decât factorul furnizat;
+  - getMaxLeafSize :
+    Determina nodul cu cel mai mare size, adica dimensiunea laturii 
+    pătratului pentru cea mai mare zonă din imagine care a
+    rămas nedivizată.
+  - cerinta1:
+    Care apeleaza functiile : num_levels, countLeaves si getMaxLeafSize
+    pentru a determina nivelul, numarul de blocuri si dimensiunea
+    celui mai mare bloc
+  - printLevelNodes :
+    Afiseaza nivelul specificat de noduri dintr-un arbore. Verifica daca 
+    nodul este nul si, daca este, iese din functie. Daca nivelul este zero, 
+    functia afiseaza tipul si culoarea nodului în fisierul de iesire 
+    specificat. Daca nivelul nu este zero, functia apelaza recursiv 
+    functia printLevelNodes pentru fiecare dintre cei patru copii ai 
+    nodului specificat cu nivelul cu o unitate mai mic.
+  - printQuadTreeLevelOrder :
+    Afiseaza întreg arborele prin apelarea functiei printLevelNodes 
+    pentru fiecare nivel de la 0 la nivelul maxim al arborelui. 
+
+Cerința 1 - Compresia fisierelor
+Statistici_Test  0 ................................................. FAIL
+Statistici_Test  1 ................................................. FAIL
+Statistici_Test  2 ................................................. PASS
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 48: bc: command not found
+Statistici_Test  3 ................................................. PASS
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 48: bc: command not found
+Statistici_Test  4 ................................................. PASS
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 48: bc: command not found
+Statistici_Test  5 ................................................. PASS
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 48: bc: command not found
+Statistici_Test  6 ................................................. PASS
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 48: bc: command not found
+Statistici_Test  7 ................................................. PASS
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 48: bc: command not found
+Statistici_Test  8 ................................................. PASS
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 48: bc: command not found
+Statistici_Test  9 ................................................. PASS
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 48: bc: command not found
+Statistici_Test 10 ................................................. PASS
+Statistici_Test 11 ................................................. PASS
+Statistici_Test 12 ................................................. PASS
+Statistici_Test 13 ................................................. PASS
+Statistici_Test 14 ................................................. PASS
+Statistici_Test 15 ................................................. PASS
+Statistici_Test 16 ................................................. PASS
+Statistici_Test 17 ................................................. PASS
+Statistici_Test 18 ................................................. PASS
+Statistici_Test 19 ................................................. PASS
+Cerința 2 - Compresia fișierelor
+Compresia_Test  0 .................................................. FAIL
+Compresia_Test  1 .................................................. FAIL
+Compresia_Test  2 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 84: bc: command not found
+Compresia_Test  3 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 84: bc: command not found
+Compresia_Test  4 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 84: bc: command not found
+Compresia_Test  5 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 84: bc: command not found
+Compresia_Test  6 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 84: bc: command not found
+Compresia_Test  7 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 84: bc: command not found
+Compresia_Test  8 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 84: bc: command not found
+Compresia_Test  9 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+cat: rezultat_valgrind.txt: No such file or directory
+VALGRIND ........................................................... PASS
+./check.sh: line 84: bc: command not found
+Compresia_Test 10 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+Compresia_Test 11 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+Compresia_Test 12 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+Compresia_Test 13 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+Compresia_Test 14 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+Compresia_Test 15 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+Compresia_Test 16 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+Compresia_Test 17 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+Compresia_Test 18 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+Compresia_Test 19 .................................................. PASS
+./check.sh: line 78: bc: command not found
+./check.sh: line 79: bc: command not found
+Cerința 3 - Decompresia fișierelor
+Decompresia_Test  0 ................................................ FAIL
+Decompresia_Test  1 ................................................ FAIL
+Decompresia_Test  2 ................................................ FAIL
+Decompresia_Test  3 ................................................ FAIL
+Decompresia_Test  4 ................................................ FAIL
+Decompresia_Test  5 ................................................ FAIL
+Decompresia_Test  6 ................................................ FAIL
+Decompresia_Test  7 ................................................ FAIL
+Decompresia_Test  8 ................................................ FAIL
+Decompresia_Test  9 ................................................ FAIL
+Decompresia_Test 10 ................................................ FAIL
+Decompresia_Test 11 ................................................ FAIL
+Decompresia_Test 12 ................................................ FAIL
+Decompresia_Test 13 ................................................ FAIL
+Decompresia_Test 14 ................................................ FAIL
+Decompresia_Test 15 ................................................ FAIL
+Decompresia_Test 16 ................................................ FAIL
+Decompresia_Test 17 ................................................ FAIL
+Decompresia_Test 18 ................................................ FAIL
+Decompresia_Test 19 ................................................ FAIL
+Cerinta 1 : 18
+Cerinta 2 :
+Cerinta 3 : 0
+Total     :
+Bonus     :
+Ai acumulat p din maxim 80p! :(

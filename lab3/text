@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct node {
+    void* data;
+    struct node* next;
+} node;
+typedef struct TList {
+    node* head;
+    int len;
+} TList;
+node* find_middle_node(TList *list) {
+    if (list->head == NULL) {
+        // Lista este goală
+        return NULL;
+    }
+    node *s_ptr = list->head;
+    node *f_ptr = list->head;
+    while (f_ptr != NULL && f_ptr->next != NULL) {
+        s_ptr = s_ptr->next;
+        f_ptr = f_ptr->next->next;
+    }
+    return s_ptr;
+}

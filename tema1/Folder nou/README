@@ -1,0 +1,36 @@
+		Banda Magica
+
+	In implementarea codului m-am folosit de : o lista dublu inlantuita, o coada 
+pentru a stoca comenzile de tip UPDATE si doua stive pentru UNDO si REDO.
+
+	Utilitatea functiilor:
+- init, aloca memorie pentru lista dublu inlantuita si initializeaza santinela
+- freeList, elibereaza memoria utilizata pentru lista
+- initQueue, aloca memorie pentru coada
+- initStack, aloca memorie pentru stive
+- push, adauga un element in stiva respectiva
+- pop, scoate elementul din stiva si il returneaza
+- emptyStack, goleste stiva
+- SHOW, afiseaza toate elementele din lista
+- SHOW_CURRENT, afiseaza elementul de pe pozitia degetului
+- add, adauga un nou element in lista
+- MOVE_LEFT, schimba pozitia degetului la stanga
+- MOVE_RIGHT, schimba pozitia degetului la dreapta
+- WRITE, scrie pe pozitia curenta un caracter
+- INSERT_LEFT, insereaza la stanga pozitiei curente un caracter, verificand daca 
+pozitia curenta este diferita de pozitia santinelei
+- INSERT_RIGHT, insereaza la dreapta pozitiei curente un caracter
+- MOVE_LEFT_CHAR, cauta la stanga pozitiei curente un caracter, daca nu il gaseste 
+afiseaza eroare si pozitia curenta nu se schimba
+- MOVE_RIGHT_CHAR, cauta la dreapta pozitiei curente un caracter, daca il gaseste 
+pozitia curenta devine prima pozitie unde este gasit caracterul, daca nu mai adauga 
+un element in lista
+- UNDO, reface pasul anterior
+- REDO, anuleaza UNDO
+- enqueue, adauga in coada comenzile de tip UPDATE ca pe niste stringuri
+- dequeue, scoate din coada prima comanda si schimba pozitia de inceput din coada
+
+	In main, se citesc din fisierul tema1.in numarul de comenzi, iar apoi comenzile.
+Se verifica ce tip de comanda este, pentru UPDATE se adauga in coada, pentru EXECUTE se extrage prima comanda si se apeleaza functia aparenta, pentru operatiile de tip
+QUERY se afiseaza, iar pentru UNDO/REDO se apeleaza functia aferenta. Dupa care se 
+elibereaza memoria din coada, stive, eliberam banda si inchidem fisierele.
